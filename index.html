@@ -178,6 +178,11 @@
     }
     next.onclick=function(){
         // clearInterval(t);
+        var spans = document.querySelectorAll(".gamePage span");
+        for(let i = 0; i < spans.length ; i++){
+            gamePage.removeChild(spans[i]);
+        }
+        createWord(5);
         speed+=20;
         t=setInterval(letterDown,50);
     }
